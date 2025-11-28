@@ -14,6 +14,9 @@ const Footer = () => {
           <Link to="/datenschutz" className="footer-link">{t('footer.datenschutz')}</Link>
         </div>
         <p>&copy; {currentYear} Falcon GmbH. {t('footer.rights')}</p>
+        <div className="footer-designer">
+          Designed by <a href="https://asa-e-business.com" target="_blank" rel="noopener noreferrer"><img src="/asa-logo-final.png" alt="ASA" className="footer-logo" /></a>
+        </div>
       </div>
     </footer>
   );

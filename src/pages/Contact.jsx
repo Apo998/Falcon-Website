@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './Contact.css';
 
 const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -17,18 +18,37 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Vielen Dank für Ihre Nachricht! Wir werden uns bald bei Ihnen melden.');
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      message: ''
-    });
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('http://localhost:3000/api/messages', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      alert('Vielen Dank für Ihre Nachricht! Wir werden uns bald bei Ihnen melden.');
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Es gab ein Problem beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -83,8 +103,8 @@ const Contact = () => {
           />
         </div>
 
-        <button type="submit" className="submit-button">
-          Nachricht senden
+        <button type="submit" className="submit-button" disabled={isSubmitting}>
+          {isSubmitting ? 'Wird gesendet...' : 'Nachricht senden'}
         </button>
       </form>
     </div>
