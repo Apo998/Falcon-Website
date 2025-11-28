@@ -14,7 +14,12 @@
   "home": {
     "heroTitle": "Falcon Security",
     "heroSubtitle": "Professionelle Sicherheitsdienste, maßgeschneidert auf Ihre Bedürfnisse.",
-    "clientsTitle": "Unsere Kunden"
+    "clientsTitle": "Unsere Kunden",
+    "philosophy": {
+      "title": "Warum sich für die Falcon entscheiden?",
+      "p1": "Die Falcon GmbH steht für Sicherheits- und Servicedienstleistungen des einundzwanzigsten Jahrhunderts. Als modernes Sicherheitsunternehmen aus Köln verbinden wir erfahrenes Fachpersonal mit digitalen Kontrollsystemen, vernetzten Live-Schaltungen und präziser Einsatzplanung.",
+      "p2": "Diese Kombination ermöglicht es uns, unseren Kunden ein zeitgemäßes, transparentes und vollumfassendes Leistungsangebot bereitzustellen. Jede Sicherheitslösung wird individuell entwickelt und exakt auf die Anforderungen Ihres Unternehmens, Ihrer Veranstaltung oder Ihres privaten Umfelds abgestimmt."
+    }
   },
   "contact": {
     "title": "Kontaktieren Sie uns",

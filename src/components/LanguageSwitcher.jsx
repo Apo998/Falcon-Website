@@ -13,6 +13,7 @@ const LanguageSwitcher = () => {
       <button 
         className={`lang-btn ${i18n.language === 'de' ? 'active' : ''}`} 
         onClick={() => changeLanguage('de')}
+        aria-label="Switch to German"
       >
         DE
       </button>
@@ -20,6 +21,7 @@ const LanguageSwitcher = () => {
       <button 
         className={`lang-btn ${i18n.language === 'en' ? 'active' : ''}`} 
         onClick={() => changeLanguage('en')}
+        aria-label="Switch to English"
       >
         EN
       </button>
