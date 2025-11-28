@@ -1,0 +1,133 @@
+.philosophy {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.philosophy::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+}
+
+.philosophy-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.philosophy-title-container {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.philosophy-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-light);
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.philosophy-title.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animated-line {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+  width: 0;
+  animation: drawLine 3s ease-in-out infinite;
+  opacity: 0.8;
+}
+
+@keyframes drawLine {
+  0% {
+    width: 0;
+    left: 0;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+    left: 0;
+    opacity: 0;
+  }
+}
+
+.philosophy-content {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+}
+
+.philosophy-content.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.philosophy-paragraph {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.philosophy-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .philosophy {
+    padding: 4rem 1.5rem;
+  }
+
+  .philosophy-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .philosophy-paragraph {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 480px) {
+  .philosophy {
+    padding: 3rem 1rem;
+  }
+
+  .philosophy-title {
+    font-size: 1.75rem;
+  }
+
+  .philosophy-paragraph {
+    font-size: 0.95rem;
+  }
+}

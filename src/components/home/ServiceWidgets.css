@@ -1,0 +1,109 @@
+.service-widgets-section {
+    padding: 4rem 2rem;
+    background-color: var(--color-background);
+    text-align: center;
+}
+
+.services-title-container {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.services-title {
+    font-size: 2.5rem;
+    color: var(--color-text);
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.service-widgets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-widget {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    aspect-ratio: 16/9;
+    display: block;
+    text-decoration: none;
+    border: 2px solid #ffac2e;
+    /* Orange frame */
+}
+
+.service-widget:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-widget img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.service-widget:hover img {
+    transform: scale(1.05);
+}
+
+.service-widget-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 2rem 1rem 1rem;
+    display: flex;
+    align-items: flex-end;
+}
+
+.service-widget-title {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Reusing the animation from Clients.css or defining it here if scoped */
+.animated-line {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+    width: 0;
+    animation: drawLine 3s ease-in-out infinite;
+    opacity: 0.8;
+}
+
+@keyframes drawLine {
+    0% {
+        width: 0;
+        left: 0;
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        width: 100%;
+        left: 0;
+        opacity: 0;
+    }
+}

@@ -1,0 +1,81 @@
+.emergency-banner {
+  background: linear-gradient(135deg, #ffac2e 0%, #e09a26 100%);
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  animation: pulse 2s ease-in-out infinite;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 6px 12px rgba(255, 172, 46, 0.5);
+  }
+}
+
+.emergency-banner-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.emergency-icon {
+  animation: ring 2s ease-in-out infinite;
+}
+
+@keyframes ring {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  10%, 30% {
+    transform: rotate(-10deg);
+  }
+  20%, 40% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+}
+
+.emergency-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.emergency-number {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.emergency-number:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .emergency-banner {
+    padding: 1rem;
+  }
+  
+  .emergency-text {
+    font-size: 0.9rem;
+  }
+  
+  .emergency-number {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "footer": {
+    "impressum": "Imprint",
+    "datenschutz": "Privacy Policy",
+    "rights": "All rights reserved."
+  },
+  "home": {
+    "heroTitle": "Falcon Security",
+    "heroSubtitle": "Professional security services tailored to your needs."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Send"
+  },
+  "legal": {
+    "impressum": "Imprint",
+    "datenschutz": "Privacy Policy"
+  }
+}
