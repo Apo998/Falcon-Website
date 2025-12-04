@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import './Contact.css';
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -35,7 +37,7 @@ const Contact = () => {
         throw new Error('Network response was not ok');
       }
 
-      alert('Vielen Dank für Ihre Nachricht! Wir werden uns bald bei Ihnen melden.');
+      alert(t('contact.successMessage'));
       // Reset form
       setFormData({
         name: '',
@@ -45,7 +47,7 @@ const Contact = () => {
       });
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('Es gab ein Problem beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut.');
+      alert(t('contact.errorMessage'));
     } finally {
       setIsSubmitting(false);
     }
@@ -53,12 +55,12 @@ const Contact = () => {
 
   return (
     <div className="contact-page">
-      <h1>Kontakt</h1>
-      <p>Haben Sie Fragen oder benötigen Sie ein Angebot? Kontaktieren Sie uns!</p>
+      <h1>{t('contact.pageTitle')}</h1>
+      <p>{t('contact.subtitle')}</p>
       
       <form className="contact-form" onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="name">Name *</label>
+          <label htmlFor="name">{t('contact.name')}</label>
           <input
             type="text"
             id="name"
@@ -70,7 +72,7 @@ const Contact = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="email">E-Mail *</label>
+          <label htmlFor="email">{t('contact.email')}</label>
           <input
             type="email"
             id="email"
@@ -82,7 +84,7 @@ const Contact = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="phone">Telefon</label>
+          <label htmlFor="phone">{t('contact.phone')}</label>
           <input
             type="tel"
             id="phone"
@@ -93,7 +95,7 @@ const Contact = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="message">Nachricht *</label>
+          <label htmlFor="message">{t('contact.message')}</label>
           <textarea
             id="message"
             name="message"
@@ -104,7 +106,7 @@ const Contact = () => {
         </div>
 
         <button type="submit" className="submit-button" disabled={isSubmitting}>
-          {isSubmitting ? 'Wird gesendet...' : 'Nachricht senden'}
+          {isSubmitting ? t('contact.submitting') : t('contact.submit')}
         </button>
       </form>
     </div>

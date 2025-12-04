@@ -9,7 +9,7 @@ const ServiceWidgets = () => {
     return (
         <section className="service-widgets-section">
             <div className="services-title-container">
-                <h2 className="services-title">Unsere Leistungen</h2>
+                <h2 className="services-title">{t('home.servicesTitle')}</h2>
                 <div className="animated-line"></div>
             </div>
 

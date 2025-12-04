@@ -14,19 +14,26 @@
   "home": {
     "heroTitle": "Falcon Security",
     "heroSubtitle": "Professionelle Sicherheitsdienste, maßgeschneidert auf Ihre Bedürfnisse.",
+    "contactBtn": "KONTAKT UNS",
+    "servicesTitle": "Unsere Leistungen",
     "clientsTitle": "Unsere Kunden",
     "philosophy": {
       "title": "Warum sich für die Falcon entscheiden?",
-      "p1": "Die Falcon GmbH steht für Sicherheits- und Servicedienstleistungen des einundzwanzigsten Jahrhunderts. Als modernes Sicherheitsunternehmen aus Köln verbinden wir erfahrenes Fachpersonal mit digitalen Kontrollsystemen, vernetzten Live-Schaltungen und präziser Einsatzplanung.",
+      "p1": "Die Falcon GmbH steht für Sicherheit- und Dienstleistungen des einundzwanzigsten Jahrhunderts. Als modernes Sicherheitsunternehmen aus Köln verbinden wir erfahrenes Fachpersonal mit digitalen Kontrollsystemen, vernetzten Live-Schaltungen und präziser Einsatzplanung.",
       "p2": "Diese Kombination ermöglicht es uns, unseren Kunden ein zeitgemäßes, transparentes und vollumfassendes Leistungsangebot bereitzustellen. Jede Sicherheitslösung wird individuell entwickelt und exakt auf die Anforderungen Ihres Unternehmens, Ihrer Veranstaltung oder Ihres privaten Umfelds abgestimmt."
     }
   },
   "contact": {
-    "title": "Kontaktieren Sie uns",
-    "name": "Name",
-    "email": "E-Mail",
-    "message": "Nachricht",
-    "submit": "Senden"
+    "pageTitle": "Kontakt",
+    "subtitle": "Haben Sie Fragen oder benötigen Sie ein Angebot? Kontaktieren Sie uns!",
+    "name": "Name *",
+    "email": "E-Mail *",
+    "phone": "Telefon",
+    "message": "Nachricht *",
+    "submit": "Nachricht senden",
+    "submitting": "Wird gesendet...",
+    "successMessage": "Vielen Dank für Ihre Nachricht! Wir werden uns bald bei Ihnen melden.",
+    "errorMessage": "Es gab ein Problem beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut."
   },
   "legal": {
     "impressumTitle": "Impressum",

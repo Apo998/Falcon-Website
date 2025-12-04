@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Phone, ChevronDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from '../LanguageSwitcher';
@@ -9,6 +9,8 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const { t } = useTranslation();
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -17,6 +19,26 @@ const Header = () => {
     const toggleServices = (e) => {
         e.preventDefault();
         setIsServicesOpen(!isServicesOpen);
+    };
+
+    const handleClientsClick = (e) => {
+        e.preventDefault();
+        setIsMenuOpen(false);
+        
+        if (location.pathname === '/') {
+            const element = document.getElementById('clients');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        } else {
+            navigate('/');
+            setTimeout(() => {
+                const element = document.getElementById('clients');
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
+        }
     };
 
     return (
@@ -64,7 +86,7 @@ const Header = () => {
                         </div>
                     </li>
                     <li>
-                        <a href="/#clients" className="nav-link" onClick={() => setIsMenuOpen(false)}>
+                        <a href="/#clients" className="nav-link" onClick={handleClientsClick}>
                             {t('header.clients')}
                         </a>
                     </li>
