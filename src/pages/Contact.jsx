@@ -25,7 +25,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('http://localhost:3000/api/messages', {
+      const response = await fetch('http://localhost:3001/api/messages', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ const Contact = () => {
       });
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert(t('contact.errorMessage'));
+      alert(`Error: ${error.message}`);
     } finally {
       setIsSubmitting(false);
     }
