@@ -14,10 +14,11 @@
 .logo {
   display: flex;
   align-items: center;
+  z-index: 1002;
 }
 
 .logo img {
-  height: 80px; /* Increased from 40px */
+  height: 80px;
   width: auto;
   transition: transform 0.3s ease;
 }
@@ -42,6 +43,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  padding: 0.5rem 0;
 }
 
 .nav-link:hover {
@@ -51,7 +53,7 @@
 .nav-link::after {
   content: '';
   position: absolute;
-  bottom: -5px;
+  bottom: 0;
   left: 0;
   width: 0;
   height: 2px;
@@ -78,6 +80,13 @@
   background: none;
   border: none;
   cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+  z-index: 1002;
+}
+
+.mobile-menu-btn:hover {
+  transform: scale(1.1);
+  color: var(--color-primary);
 }
 
 /* Dropdown Styles */
@@ -134,29 +143,60 @@
 @media (max-width: 768px) {
   .nav-list {
     display: none;
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 0;
     left: 0;
     width: 100%;
+    height: 100vh;
     background-color: var(--color-background);
     flex-direction: column;
-    padding: 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 120px 2rem 2rem 2rem;
+    border-bottom: none;
     align-items: flex-start;
+    justify-content: flex-start;
+    overflow-y: auto;
+    z-index: 1001;
+    gap: 0 !important; /* Force no gap */
   }
 
   .nav-list.open {
     display: flex;
   }
 
+  .nav-list li {
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex: 0 0 auto;
+    display: block;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+  
+  .nav-link {
+    padding: 10px 0;
+    width: 100%;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    margin: 0 !important;
+  }
+
   .mobile-menu-btn {
     display: block;
+    margin-left: auto;
   }
 
   .dropdown {
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex: 0 0 auto;
   }
 
   .dropdown-menu {
@@ -168,13 +208,23 @@
     visibility: visible;
     transform: none;
     padding: 0;
-    margin-top: 0.5rem;
+    margin-top: 0;
     margin-left: 1rem;
-    display: none; /* Hidden by default on mobile until toggled or just always show? Let's make it always show for simplicity or hover doesn't work well */
-    display: flex; /* Always show items in mobile menu for now to ensure accessibility */
+    display: none;
+  }
+
+  .dropdown.open .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
   }
   
-  .dropdown:hover .dropdown-menu {
-      /* Reset hover effect for mobile if needed, but display:flex handles it */
+  .language-switcher-item {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
   }
 }

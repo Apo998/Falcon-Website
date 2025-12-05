@@ -1,13 +1,15 @@
 .service-widgets-section {
     padding: 4rem 2rem;
     background-color: var(--color-background);
-    text-align: center;
 }
 
 .services-title-container {
-    display: inline-block;
+    display: block;
     position: relative;
     margin-bottom: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
 }
 
 .services-title {
@@ -16,6 +18,7 @@
     margin: 0;
     position: relative;
     z-index: 1;
+    text-align: center;
 }
 
 .service-widgets-grid {
@@ -36,7 +39,6 @@
     display: block;
     text-decoration: none;
     border: 2px solid #ffac2e;
-    /* Orange frame */
 }
 
 .service-widget:hover {
@@ -64,6 +66,7 @@
     padding: 2rem 1rem 1rem;
     display: flex;
     align-items: flex-end;
+    justify-content: center;
 }
 
 .service-widget-title {
@@ -72,9 +75,10 @@
     font-weight: 600;
     margin: 0;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 100%;
 }
 
-/* Reusing the animation from Clients.css or defining it here if scoped */
 .animated-line {
     position: absolute;
     bottom: -10px;

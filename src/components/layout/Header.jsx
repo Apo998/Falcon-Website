@@ -95,7 +95,7 @@ const Header = () => {
                             {t('header.contact')}
                         </Link>
                     </li>
-                    <li>
+                    <li className="language-switcher-item">
                         <LanguageSwitcher />
                     </li>
                 </ul>

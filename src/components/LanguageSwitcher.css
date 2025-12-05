@@ -13,11 +13,12 @@
   font-size: 14px;
   font-weight: 500;
   padding: 4px;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .lang-btn:hover {
   color: #ffac2e;
+  transform: scale(1.1);
 }
 
 .lang-btn.active {
