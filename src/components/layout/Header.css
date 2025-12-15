@@ -272,7 +272,7 @@
 @media (max-width: 768px) {
   .emergency-btn-item {
     margin-right: 0;
-    margin-bottom: 5px; /* Adjust spacing on mobile */
+    margin-bottom: 25px; /* Adjust spacing on mobile */
     width: 100%;
   }
 
