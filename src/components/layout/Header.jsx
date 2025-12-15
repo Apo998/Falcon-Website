@@ -41,22 +41,6 @@ const Header = () => {
         }
     };
     
-    const handleEmergencyClick = () => {
-        if (location.pathname === '/') {
-            const element = document.querySelector('.emergency-banner');
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
-        } else {
-            navigate('/');
-            setTimeout(() => {
-                const element = document.querySelector('.emergency-banner');
-                if (element) {
-                    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }
-            }, 100);
-        }
-    }
     
     const handleLogoClick = () => {
         setIsMenuOpen(false);
@@ -71,15 +55,15 @@ const Header = () => {
 
             <button className="mobile-menu-btn" onClick={toggleMenu}>
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+            </a>
 
             <nav>
                 <ul className={`nav-list ${isMenuOpen ? 'open' : ''}`}>
                     {/* Emergency Button - Placed first (left side) */}
                     <li className="emergency-btn-item">
-                        <button className="emergency-btn" onClick={handleEmergencyClick}>
+                        <a href="tel:+4915206390306" className="emergency-btn">
                             <span>24/7 NOTRUF</span>
-                        </button>
+                        </a>
                     </li>
                     <li>
                         <Link to="/about" className="nav-link" onClick={() => setIsMenuOpen(false)}>
@@ -93,7 +77,7 @@ const Header = () => {
                             style={{ background: 'none', border: 'none', cursor: 'pointer', font: 'inherit', display: 'flex', alignItems: 'center' }}
                         >
                             {t('header.services')} <ChevronDown size={16} />
-                        </button>
+                        </a>
                         <div className="dropdown-menu">
                             <Link to="/services/veranstaltungsschutz" className="dropdown-item" onClick={() => setIsMenuOpen(false)}>{t('services.veranstaltungsschutz')}</Link>
                             <Link to="/services/kaufhausdetektive" className="dropdown-item" onClick={() => setIsMenuOpen(false)}>{t('services.kaufhausdetektive')}</Link>
