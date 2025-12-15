@@ -28,7 +28,7 @@ const Clients = () => {
         {clients.map((client) => (
           <img 
             key={client.id} 
-            src={`${import.meta.env.BASE_URL}${client.src.startsWith('/') ? client.src.slice(1) : client.src}`} 
+            src={client.src} 
             alt={client.alt} 
             className="client-logo" 
           />

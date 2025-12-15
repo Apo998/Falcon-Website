@@ -20,7 +20,7 @@ const ServiceWidgets = () => {
                         to={`/services/${service.id}`}
                         className="service-widget"
                     >
-                        <img src={`${import.meta.env.BASE_URL}${service.img.startsWith('/') ? service.img.slice(1) : service.img}`} alt={t(`services.${service.id}`)} />
+                        <img src={service.img} alt={t(`services.${service.id}`)} />
                         <div className="service-widget-overlay">
                             <h3 className="service-widget-title">{t(`services.${service.id}`)}</h3>
                         </div>

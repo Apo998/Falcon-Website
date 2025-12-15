@@ -37,7 +37,7 @@ const Footer = () => {
            <div className="designer-group">
               <span>Designed by</span>
               <a href="https://asa-e-business.com" target="_blank" rel="noopener noreferrer">
-                <img src={`${import.meta.env.BASE_URL}asa-logo-final.png`} alt="ASA" className="footer-logo" />
+                <img src="/asa-logo-final.png" alt="ASA" className="footer-logo" />
               </a>
            </div>
         </div>

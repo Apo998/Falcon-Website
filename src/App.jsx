@@ -12,7 +12,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router basename={import.meta.env.BASE_URL}>
+    <Router>
       <ScrollToTop />
       <Layout>
         <Routes>
