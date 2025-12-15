@@ -4,7 +4,7 @@ import './Team.css';
 
 const teamMembers = [
   { name: 'Sami Sahin', roleKey: 'ceo' },
-  { name: 'Ekrem Sahin', roleKey: 'prokurist' },
+  { name: 'Ekrem Sahin', roleKey: 'operations_manager' },
   { name: 'Aycan Kocaoglu', roleKey: 'sales' },
   { name: 'Abdullah Adaileh', roleKey: 'technician' },
   { name: 'Yasin Aras', roleKey: 'area_manager' },

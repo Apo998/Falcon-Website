@@ -55,7 +55,7 @@ const Header = () => {
 
             <button className="mobile-menu-btn" onClick={toggleMenu}>
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </a>
+            </button>
 
             <nav>
                 <ul className={`nav-list ${isMenuOpen ? 'open' : ''}`}>
@@ -77,7 +77,7 @@ const Header = () => {
                             style={{ background: 'none', border: 'none', cursor: 'pointer', font: 'inherit', display: 'flex', alignItems: 'center' }}
                         >
                             {t('header.services')} <ChevronDown size={16} />
-                        </a>
+                        </button>
                         <div className="dropdown-menu">
                             <Link to="/services/veranstaltungsschutz" className="dropdown-item" onClick={() => setIsMenuOpen(false)}>{t('services.veranstaltungsschutz')}</Link>
                             <Link to="/services/kaufhausdetektive" className="dropdown-item" onClick={() => setIsMenuOpen(false)}>{t('services.kaufhausdetektive')}</Link>
