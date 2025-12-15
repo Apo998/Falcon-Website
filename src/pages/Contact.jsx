@@ -26,6 +26,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
+      console.log('Submitting to Supabase...');
       const { error } = await supabase
         .from('messages')
         .insert([
