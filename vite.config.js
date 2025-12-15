@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   base: '/falcon-website/',
   server: {
-    port: 3000,
+    port: 3002,
   },
 })
