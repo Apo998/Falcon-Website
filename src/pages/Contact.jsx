@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { supabase } from '../lib/supabaseClient';
 import './Contact.css';
 
 const Contact = () => {
@@ -25,16 +26,20 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('http://localhost:3001/api/messages', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+      const { error } = await supabase
+        .from('messages')
+        .insert([
+          {
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            message: formData.message,
+            created_at: new Date().toISOString()
+          }
+        ]);
 
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
+      if (error) {
+        throw error;
       }
 
       alert(t('contact.successMessage'));

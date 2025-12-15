@@ -62,5 +62,25 @@
     "personenschutz_desc": "<p>Falcon GmbH's personal protection is carried out exclusively by qualified specialists. Our bodyguards have excellent training, experience from police or military service, and valid permits for armed missions.</p>\n<p>We offer discreet, unobtrusive escort protection as well as visible security presence – depending on risk analysis and personal wishes.</p>\n<p>Whether entrepreneurs, politicians, prominent personalities, or endangered private individuals: We develop a tailor-made protection concept that guarantees maximum security and absolute discretion.</p>",
     "ausbildung_desc": "<p>As a professional security company, Falcon GmbH offers sound training and further education for security forces. This includes training in the areas of communication, conflict management, self-protection, legal basics, fire protection, first aid, and tactical behavior.</p>\n<p>Our training programs are aimed at newcomers as well as experienced security staff who want to deepen their knowledge. The courses are conducted by qualified instructors and are based on current legal standards and real operational requirements.</p>",
     "andere_desc": "<p>In this area, Falcon GmbH offers additional services that relieve your company and ensure the smooth running of your property:</p>\n\n<h3>Caretaker Service</h3>\n<p>Our caretakers take care of the technical support of your property, carry out patrols, small repairs, functional checks, maintenance coordination, and document all security-relevant observations.</p>\n\n<h3>Cleaning Service</h3>\n<p>Falcon GmbH's professional cleaning service includes office cleaning, building cleaning, maintenance cleaning, and special cleaning. Our employees work efficiently, reliably, and discreetly – ideal for companies, residential properties, and public institutions.</p>\n\n<h3>Service and Support Services</h3>\n<p>We provide service staff for reception, customer support, switchboard, event support, and concierge-like tasks.</p>\n<p>These employees combine a good appearance with organizational strength and actively contribute to a professional appearance of your company.</p>\n\n<h3>Further Individual Services</h3>\n<p>Whether technical support, key management, winter service, or special orders – we create tailor-made service packages for you that fit seamlessly into your requirements.</p>"
+  },
+  "about_page": {
+    "title": "About Us",
+    "subtitle": "Your reliable partner for security in North Rhine-Westphalia",
+    "content": {
+      "p1": "For over five years, Falcon GmbH has been successfully active in the security sector and has established itself as a reliable partner for preventive security measures. Our areas of operation extend across the entire state of North Rhine-Westphalia, combining regional proximity with high operational flexibility.",
+      "p2": "Our team currently consists of around 150 qualified service personnel, including more than 50 security guards with expert knowledge examination or instruction according to §34a GewO. Regular training and continuous further education ensure that our employees always work according to current legal standards, proven security concepts, and modern operational methods.",
+      "p3": "As a modern security company from Cologne, Falcon GmbH stands for security and services of the 21st century. We combine experienced specialist personnel with digital control systems, networked live connections, and precise operational and resource planning. This technological networking enables transparent processes, fast response times, and a high degree of control and traceability.",
+      "p4": "Our customers benefit from a contemporary, holistic service portfolio that is individually developed and tailored exactly to the requirements of companies, events, or private clients. The goal of Falcon GmbH is to create sustainable security solutions that combine trust, efficiency, and protection at the highest level."
+    },
+    "team": {
+      "title": "Our Team",
+      "roles": {
+        "ceo": "CEO",
+        "prokurist": "Authorized Signatory",
+        "sales": "Sales",
+        "technician": "Technician",
+        "area_manager": "Area Manager"
+      }
+    }
   }
 }

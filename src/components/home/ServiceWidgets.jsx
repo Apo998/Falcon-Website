@@ -14,7 +14,7 @@ const ServiceWidgets = () => {
             </div>
 
             <div className="service-widgets-grid">
-                {services.map((service) => (
+                {services.filter(s => s.id !== 'revierfahren').map((service) => (
                     <Link
                         key={service.id}
                         to={`/services/${service.id}`}

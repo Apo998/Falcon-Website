@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X, Phone, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from '../LanguageSwitcher';
 import './Header.css';
@@ -40,10 +40,32 @@ const Header = () => {
             }, 100);
         }
     };
+    
+    const handleEmergencyClick = () => {
+        if (location.pathname === '/') {
+            const element = document.querySelector('.emergency-banner');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        } else {
+            navigate('/');
+            setTimeout(() => {
+                const element = document.querySelector('.emergency-banner');
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }, 100);
+        }
+    }
+    
+    const handleLogoClick = () => {
+        setIsMenuOpen(false);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
     return (
         <header className="header">
-            <Link to="/" className="logo">
+            <Link to="/" className="logo" onClick={handleLogoClick}>
                 <img src="/logo.png" alt="Falcon" />
             </Link>
 
@@ -53,11 +75,11 @@ const Header = () => {
 
             <nav>
                 <ul className={`nav-list ${isMenuOpen ? 'open' : ''}`}>
-                    <li>
-                        <a href="tel:+4922156035898" className="nav-link phone-link" onClick={() => setIsMenuOpen(false)}>
-                            <Phone size={18} />
-                            <span>+49 221 56035898</span>
-                        </a>
+                    {/* Emergency Button - Placed first (left side) */}
+                    <li className="emergency-btn-item">
+                        <button className="emergency-btn" onClick={handleEmergencyClick}>
+                            <span>24/7 NOTRUF</span>
+                        </button>
                     </li>
                     <li>
                         <Link to="/about" className="nav-link" onClick={() => setIsMenuOpen(false)}>

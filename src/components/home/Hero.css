@@ -1,7 +1,6 @@
 .hero {
-  height: 80vh;
-  min-height: 600px;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=2070&auto=format&fit=crop');
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/falcon-eye-banner.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -74,6 +73,14 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    /* Gradient covers, Image zoomed to 250% width */
+    background-size: cover, 250%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #000;
+  }
+
   .hero h1 {
     font-size: 2.5rem;
   }

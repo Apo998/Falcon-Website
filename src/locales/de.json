@@ -62,5 +62,25 @@
     "personenschutz_desc": "<p>Der Personenschutz der Falcon GmbH wird ausschließlich von qualifizierten Spezialisten durchgeführt. Unsere Bodyguards verfügen über exzellente Ausbildung, Erfahrung aus Polizei- oder Militärdienst und rechtsgültige Genehmigungen für bewaffnete Einsätze.</p>\n<p>Wir bieten diskreten, unauffälligen Begleitschutz ebenso wie sichtbare Sicherheitspräsenz – je nach Risikoanalyse und persönlichem Wunsch.</p>\n<p>Ob Unternehmer, Politiker, prominente Persönlichkeiten oder gefährdete Privatpersonen: Wir entwickeln ein maßgeschneidertes Schutzkonzept, das maximale Sicherheit und absolute Diskretion gewährleistet.</p>",
     "ausbildung_desc": "<p>Als professionelles Sicherheitsunternehmen bietet die Falcon GmbH fundierte Aus- und Weiterbildungen für Sicherheitskräfte. Dazu gehören Schulungen im Bereich Kommunikation, Konfliktmanagement, Eigensicherung, rechtliche Grundlagen, Brandschutz, Erste Hilfe und taktisches Verhalten.</p>\n<p>Unsere Ausbildungsprogramme richten sich an Neueinsteiger ebenso wie an erfahrene Sicherheitsmitarbeiter, die ihre Kenntnisse vertiefen möchten. Die Kurse werden von qualifizierten Ausbildern durchgeführt und orientieren sich an aktuellen gesetzlichen Standards sowie realen Einsatzanforderungen.</p>",
     "andere_desc": "<p>Unter diesem Bereich bietet die Falcon GmbH zusätzliche Serviceleistungen an, die Ihren Betrieb entlasten und den reibungslosen Ablauf Ihrer Immobilie sicherstellen:</p>\n\n<h3>Hausmeisterdienst</h3>\n<p>Unsere Hausmeister sorgen für die technische Betreuung Ihrer Immobilie, übernehmen Kontrollgänge, kleine Reparaturen, Funktionsprüfungen, Wartungskoordination und dokumentieren alle sicherheitsrelevanten Beobachtungen.</p>\n\n<h3>Reinigungsdienst</h3>\n<p>Der professionelle Reinigungsservice der Falcon GmbH umfasst Büroreinigung, Gebäudereinigung, Unterhaltsreinigung und Sonderreinigungen. Unsere Mitarbeitenden arbeiten effizient, zuverlässig und diskret – ideal für Unternehmen, Wohnobjekte und öffentliche Einrichtungen.</p>\n\n<h3>Service- und Supportleistungen</h3>\n<p>Wir stellen Servicekräfte für Empfang, Kundenbetreuung, Telefonzentrale, Veranstaltungssupport und conciergeähnliche Aufgaben.</p>\n<p>Diese Mitarbeiter vereinen gutes Auftreten mit organisatorischer Stärke und tragen aktiv zu einem professionellen Erscheinungsbild Ihres Unternehmens bei.</p>\n\n<h3>Weitere individuelle Services</h3>\n<p>Ob technische Unterstützung, Schlüsselmanagement, Winterdienst oder Sonderaufträge – wir erstellen für Sie maßgeschneiderte Dienstleistungspakete, die sich nahtlos in Ihre Anforderungen einfügen.</p>"
+  },
+  "about_page": {
+    "title": "Über uns",
+    "subtitle": "Ihr verlässlicher Partner für Sicherheit in NRW",
+    "content": {
+      "p1": "Seit über fünf Jahren ist die Falcon GmbH erfolgreich im Sicherheitssektor tätig und hat sich als verlässlicher Partner für präventive Sicherheitsmaßnahmen etabliert. Unsere Einsatzgebiete erstrecken sich über das gesamte Bundesland Nordrhein-Westfalen, wodurch wir regionale Nähe mit hoher Einsatzflexibilität verbinden.",
+      "p2": "Unser Team besteht aktuell aus rund 150 qualifizierten Servicekräften, darunter mehr als 50 Sicherheitsmitarbeiterinnen und -mitarbeiter mit Sachkundeprüfung oder Unterrichtung gemäß §34a GewO. Regelmäßige Schulungen und kontinuierliche Weiterbildungen stellen sicher, dass unsere Mitarbeitenden stets nach aktuellen rechtlichen Standards, bewährten Sicherheitskonzepten und modernen Einsatzmethoden arbeiten.",
+      "p3": "Als modernes Sicherheitsunternehmen aus Köln steht die Falcon GmbH für Sicherheits- und Dienstleistungen des 21. Jahrhunderts. Wir kombinieren erfahrenes Fachpersonal mit digitalen Kontrollsystemen, vernetzten Live-Schaltungen und präziser Einsatz- und Ressourcenplanung. Diese technologische Vernetzung ermöglicht transparente Abläufe, schnelle Reaktionszeiten und ein hohes Maß an Kontrolle und Nachvollziehbarkeit.",
+      "p4": "Unsere Kunden profitieren von einem zeitgemäßen, ganzheitlichen Leistungsportfolio, das individuell entwickelt und exakt auf die Anforderungen von Unternehmen, Veranstaltungen oder privaten Auftraggebern zugeschnitten wird. Ziel der Falcon GmbH ist es, nachhaltige Sicherheitslösungen zu schaffen, die Vertrauen, Effizienz und Schutz auf höchstem Niveau vereinen."
+    },
+    "team": {
+      "title": "Unser Team",
+      "roles": {
+        "ceo": "Geschäftsführung",
+        "prokurist": "Prokurist",
+        "sales": "Vertrieb",
+        "technician": "Techniker",
+        "area_manager": "Bereichsleiter"
+      }
+    }
   }
 }
