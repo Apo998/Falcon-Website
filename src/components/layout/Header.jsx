@@ -66,7 +66,7 @@ const Header = () => {
     return (
         <header className="header">
             <Link to="/" className="logo" onClick={handleLogoClick}>
-                <img src="/logo.png" alt="Falcon" />
+                <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Falcon" />
             </Link>
 
             <button className="mobile-menu-btn" onClick={toggleMenu}>
