@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   
-  base: '/Falcon-Website/', server: {
+  base: '/', server: {
     port: 3000,
   },
 })
