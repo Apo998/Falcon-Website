@@ -64,7 +64,7 @@ const Contact = () => {
   };
 
   return (
-    <div className=contact-page>
+    <div className="contact-page">
       <h1>{t('contact.pageTitle')}</h1>
       <p>{t('contact.subtitle')}</p>
       
@@ -81,7 +81,7 @@ const Contact = () => {
         </div>
       )}
 
-      <form className=contact-form onSubmit={handleSubmit}>
+      <form className="contact-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">{t('contact.name')}</label>
           <input
