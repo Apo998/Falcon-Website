@@ -6,6 +6,7 @@ import './Contact.css';
 const Contact = () => {
   const { t } = useTranslation();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState({ type: '', message: '' });
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -24,9 +25,9 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setStatus({ type: '', message: '' });
 
     try {
-      console.log('Submitting to Supabase...');
       const { error } = await supabase
         .from('messages')
         .insert([
@@ -43,7 +44,7 @@ const Contact = () => {
         throw error;
       }
 
-      alert(t('contact.successMessage'));
+      setStatus({ type: 'success', message: t('contact.successMessage') || 'Message sent successfully!' });
       // Reset form
       setFormData({
         name: '',
@@ -51,20 +52,36 @@ const Contact = () => {
         phone: '',
         message: ''
       });
+      
+      setTimeout(() => setStatus({ type: '', message: '' }), 5000);
+
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert(`Error: ${error.message}`);
+      setStatus({ type: 'error', message: error.message || t('contact.errorMessage') || 'An error occurred.' });
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <div className="contact-page">
+    <div className=contact-page>
       <h1>{t('contact.pageTitle')}</h1>
       <p>{t('contact.subtitle')}</p>
       
-      <form className="contact-form" onSubmit={handleSubmit}>
+      {status.message && (
+        <div style={{
+          padding: '1rem',
+          borderRadius: '4px',
+          marginBottom: '1rem',
+          backgroundColor: status.type === 'error' ? 'rgba(255, 0, 0, 0.1)' : 'rgba(0, 255, 0, 0.1)',
+          border: status.type === 'error' ? '1px solid rgba(255,50,50,0.5)' : '1px solid rgba(50,255,50,0.5)',
+          color: status.type === 'error' ? '#ff6b6b' : '#4ade80'
+        }}>
+          {status.message}
+        </div>
+      )}
+
+      <form className=contact-form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">{t('contact.name')}</label>
           <input
@@ -120,3 +137,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
