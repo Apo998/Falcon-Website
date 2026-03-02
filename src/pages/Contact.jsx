@@ -28,7 +28,8 @@ const Contact = () => {
     setStatus({ type: '', message: '' });
 
     try {
-      const { error } = await supabase
+      // 1. Save to Supabase
+      const { error: supabaseError } = await supabase
         .from('messages')
         .insert([
           {
@@ -40,8 +41,42 @@ const Contact = () => {
           }
         ]);
 
-      if (error) {
-        throw error;
+      if (supabaseError) {
+        console.error('Supabase error:', supabaseError);
+        // We continue even if Supabase fails, as the email is often more critical
+      }
+
+      // 2. Send via EmailJS
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+      if (serviceId && templateId && publicKey) {
+        const emailResponse = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            service_id: serviceId,
+            template_id: templateId,
+            user_id: publicKey,
+            template_params: {
+              from_name: formData.name,
+              from_email: formData.email,
+              phone: formData.phone,
+              message: formData.message,
+              to_name: 'Falcon Security',
+            },
+          }),
+        });
+
+        if (!emailResponse.ok) {
+          const errorData = await emailResponse.text();
+          throw new Error(`EmailJS error: ${errorData}`);
+        }
+      } else {
+        console.warn('EmailJS configuration missing. Skipping email sending.');
       }
 
       setStatus({ type: 'success', message: t('contact.successMessage') || 'Message sent successfully!' });
@@ -137,4 +172,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
