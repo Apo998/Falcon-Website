@@ -80,6 +80,7 @@ const Contact = () => {
           promises.push(sendEmail(serviceId, adminTemplateId, publicKey, {
             from_name: formData.name,
             from_email: formData.email,
+            reply_to: formData.email,
             phone: formData.phone,
             message: formData.message,
             to_name: 'Falcon Security',
@@ -90,14 +91,15 @@ const Contact = () => {
         if (autoReplyTemplateId) {
           promises.push(sendEmail(serviceId, autoReplyTemplateId, publicKey, {
             to_name: formData.name,
-            to_email: formData.email,
-            // You can add more variables for the auto-reply template if needed
+            to_email: formData.email, // common dynamic recipient variable
+            email: formData.email,    // common dynamic recipient variable
+            reply_to: 'info@falcon-koeln.de', // so user replies to your business
           }));
         }
 
         await Promise.all(promises);
       } else {
-        console.warn('EmailJS configuration missing core parameters (Service ID or Public Key).');
+        console.warn('EmailJS configuration missing core parameters.');
       }
 
       setStatus({ type: 'success', message: t('contact.successMessage') || 'Message sent successfully!' });
