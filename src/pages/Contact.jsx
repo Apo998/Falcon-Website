@@ -22,6 +22,27 @@ const Contact = () => {
     }));
   };
 
+  const sendEmail = async (serviceId, templateId, publicKey, templateParams) => {
+    const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        service_id: serviceId,
+        template_id: templateId,
+        user_id: publicKey,
+        template_params: templateParams,
+      }),
+    });
+
+    if (!response.ok) {
+      const errorData = await response.text();
+      throw new Error(`EmailJS error: ${errorData}`);
+    }
+    return response;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -43,40 +64,40 @@ const Contact = () => {
 
       if (supabaseError) {
         console.error('Supabase error:', supabaseError);
-        // We continue even if Supabase fails, as the email is often more critical
       }
 
-      // 2. Send via EmailJS
+      // 2. EmailJS Configuration
       const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
       const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+      const adminTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const autoReplyTemplateId = import.meta.env.VITE_EMAILJS_AUTOREPLY_TEMPLATE_ID;
 
-      if (serviceId && templateId && publicKey) {
-        const emailResponse = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            service_id: serviceId,
-            template_id: templateId,
-            user_id: publicKey,
-            template_params: {
-              from_name: formData.name,
-              from_email: formData.email,
-              phone: formData.phone,
-              message: formData.message,
-              to_name: 'Falcon Security',
-            },
-          }),
-        });
+      if (serviceId && publicKey) {
+        const promises = [];
 
-        if (!emailResponse.ok) {
-          const errorData = await emailResponse.text();
-          throw new Error(`EmailJS error: ${errorData}`);
+        // Forward to Business
+        if (adminTemplateId) {
+          promises.push(sendEmail(serviceId, adminTemplateId, publicKey, {
+            from_name: formData.name,
+            from_email: formData.email,
+            phone: formData.phone,
+            message: formData.message,
+            to_name: 'Falcon Security',
+          }));
         }
+
+        // Send Auto-Reply to User
+        if (autoReplyTemplateId) {
+          promises.push(sendEmail(serviceId, autoReplyTemplateId, publicKey, {
+            to_name: formData.name,
+            to_email: formData.email,
+            // You can add more variables for the auto-reply template if needed
+          }));
+        }
+
+        await Promise.all(promises);
       } else {
-        console.warn('EmailJS configuration missing. Skipping email sending.');
+        console.warn('EmailJS configuration missing core parameters (Service ID or Public Key).');
       }
 
       setStatus({ type: 'success', message: t('contact.successMessage') || 'Message sent successfully!' });
