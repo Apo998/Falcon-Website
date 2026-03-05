@@ -1,0 +1,153 @@
+{
+  "de": {
+    "hero": {
+      "title": "Falcon SecPro",
+      "subtitle": "Offizieller Support & Hilfezentrum",
+      "description": "Ihre Sicherheit ist unser Anspruch. Wir unterstützen Sie bei allen technischen Fragen rund um die Falcon SecPro App. Unser Team garantiert eine Rückmeldung innerhalb von 24 Stunden an Werktagen.",
+      "cta": "Support kontaktieren"
+    },
+    "contact": {
+      "title": "Support-Kanäle",
+      "email": "it.managment@falcon-sec.de",
+      "emergencyTitle": "Notfall-Hinweis",
+      "emergencyText": "Bei akuten Notfällen bitte unsere NOTRUF-Nummer anrufen.",
+      "status": "Systemstatus prüfen"
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen (FAQ)",
+      "login": {
+        "q": "Login-Probleme",
+        "a": "Wenn Sie sich nicht einloggen können, prüfen Sie bitte Ihre Internetverbindung. Falls es nicht funktioniert, kontaktieren Sie unser IT-Support Team."
+      },
+      "shifts": {
+        "q": "Keine Schichten sichtbar",
+        "a": "Wenn keine Schichten angezeigt werden, stellen Sie sicher, dass Sie für den aktuellen Zeitraum eingeteilt sind. Synchronisieren Sie die App manuell, indem Sie in der Schichtübersicht nach unten ziehen."
+      },
+      "sos": {
+        "q": "SOS-Button Verhalten",
+        "a": "Bei Betätigung des SOS-Buttons wird sofort ein Alarm an die Zentrale gesendet, inklusive Ihrer aktuellen GPS-Position. Der Alarm kann nur durch die Einsatzleitung oder nach Sicherheitsbestätigung beendet werden."
+      },
+      "checkpoint": {
+        "q": "Probleme beim Checkpoint-Scan",
+        "a": "Stellen Sie sicher, dass NFC auf Ihrem Gerät aktiviert ist oder die Kamera Zugriff hat (bei QR-Codes). Reinigen Sie die Linse und halten Sie das Gerät ruhig."
+      },
+      "notifications": {
+        "q": "Benachrichtigungsprobleme (iOS/Android)",
+        "a": "Prüfen Sie in den Systemeinstellungen Ihres Handys, ob \"Falcon SecPro\" die Berechtigung hat, Mitteilungen zu senden. Deaktivieren Sie den \"Bitte nicht stören\" Modus."
+      },
+      "permissions": {
+        "q": "Benötigte App-Berechtigungen",
+        "a": "Die App benötigt Zugriff auf: Standort (für GPS-Tracking/Geofencing), Benachrichtigungen (für Einsatzinfos), Kamera (für Berichte/Scans)."
+      },
+      "incident": {
+        "q": "Fehler beim Senden von Ereignisberichten",
+        "a": "Prüfen Sie, ob alle Pflichtfelder ausgefüllt sind. Bei schlechtem Empfang wird der Bericht zwischengespeichert und automatisch versendet, sobald wieder eine stabile Verbindung besteht."
+      },
+      "sync": {
+        "q": "Daten-Synchronisierungsverzögerung",
+        "a": "Synchronisierungen können bei schwacher Verbindung verzögert sein. Bleiben Sie online; die App versucht im Hintergrund, die Daten mit dem Server abzugleichen."
+      },
+      "devices": {
+        "q": "Unterstützte Geräte & OS-Versionen",
+        "a": "Falcon SecPro unterstützt iOS ab Version 15.0 und Android ab Version 10.0. Wir empfehlen die Nutzung aktueller High-End oder Mid-Range Smartphones für optimale Performance."
+      }
+    },
+    "checks": {
+      "title": "Vor dem Support-Kontakt",
+      "step1": "Internetverbindung prüfen (WLAN/Mobile Daten)",
+      "step2": "App auf die neueste Version aktualisieren",
+      "step3": "App neu starten oder Gerät neu starten",
+      "step4": "Prüfen, ob alle notwendigen Berechtigungen erteilt wurden"
+    },
+    "privacy": {
+      "title": "Datenschutz & Sicherheit",
+      "text": "Die Falcon SecPro App erfüllt höchste Sicherheitsstandards und ist DSGVO-konform. Wir verarbeiten nur Daten, die für den Betrieb und die Sicherheit Ihrer Einsätze zwingend erforderlich sind.",
+      "dataPoints": "Verarbeitete Daten: GPS-Standort (nur während der Dienstzeit), Name, Einsatzdaten, Protokolle.",
+      "links": {
+        "privacy": "Datenschutzerklärung (App)",
+        "terms": "Nutzungsbedingungen"
+      },
+      "full_policy_raw": "Falcon GmbH\nMathias-Brüggen-Str. 1\n50827 Köln\nDie Falcon GmbH („wir“, „uns“, „unser“) stellt die Falcon SecPro App zur operativen Nutzung durch autorisierte Sicherheitsmitarbeiter bereit. Diese Datenschutzerklärung erläutert, wie personenbezogene Daten erhoben, verwendet und geschützt werden.\n\n1. Für wen diese App bestimmt ist\nDiese App ist für Mitarbeiter und autorisiertes Personal der Falcon GmbH bestimmt. Sie ist nicht für die öffentliche Nutzung durch Verbraucher vorgesehen.\n\n2. Von uns erhobene Daten\nAbhängig von Ihrer Rolle und der Nutzung der App können wir folgende Daten erheben:\nKonto- und Profildaten (Name, Rolle/Funktion, Mitarbeiterkennung)\nSchicht- und Arbeitsaktivitätsdaten (zugewiesene Schichten, angenommene Schichten, Anwesenheit / Check-in / Check-out)\nStandortdaten (zur Schichtverifikation, für Patrouillen, SOS-Funktionen und operative Protokollierung)\nVorfall- und Berichtsdaten (Texte, Fotos, Anhänge, Zeitstempel)\nKommunikationsdaten (Gruppenchat-Nachrichten, Interaktionen mit Rundnachrichten)\nGeräte- und App-Daten (Gerätetyp, App-Version, Protokoll-/Fehlerinformationen)\nBenachrichtigungsdaten (Push-Token, Benachrichtigungsstatus)\n\n3. Wie wir Ihre Daten verwenden\nWir verarbeiten Daten, um:\nPersonaleinsatzplanung und die Zuweisung offener Schichten zu verwalten\nPatrouillenabläufe und operative Berichterstattung zu unterstützen\nInterne Kommunikation und Warnmeldungen zu ermöglichen\nSicherheitsreaktionen zu verbessern (einschließlich SOS-Abläufen)\nSicherheit, Audit-Protokolle sowie Betrugs- oder Missbrauchsprävention zu gewährleisten\nGesetzliche und vertragliche Verpflichtungen zu erfüllen\n\n4. Rechtsgrundlage (soweit anwendbar)\nSoweit gesetzlich erforderlich (z. B. nach der Datenschutz-Grundverordnung – DSGVO) verarbeiten wir personenbezogene Daten auf Grundlage von:\nder Erfüllung arbeits- oder vertraglicher Verpflichtungen\nberechtigten geschäftlichen Interessen im Rahmen von Sicherheitsoperationen\nder Einhaltung gesetzlicher Verpflichtungen\nIhrer Einwilligung (soweit erforderlich, z. B. bei bestimmten Berechtigungen)\n\n5. Weitergabe von Daten\nWir verkaufen keine personenbezogenen Daten.\nWir können Daten weitergeben an:\nautorisiertes internes Personal (z. B. Administratoren oder Vorgesetzte)\nDienstleister (z. B. Hosting-, Datenbank- oder Benachrichtigungsinfrastruktur)\nBehörden oder staatliche Stellen, sofern dies gesetzlich erforderlich ist\nEine Weitergabe erfolgt ausschließlich im erforderlichen Umfang zur Durchführung betrieblicher Abläufe und zur Einhaltung gesetzlicher Vorgaben.\n\n6. Aufbewahrung von Daten\nWir speichern Daten nur so lange, wie es für betriebliche, vertragliche, gesetzliche und prüfungsbezogene Anforderungen erforderlich ist.\nDie Aufbewahrungsfristen können je nach Datentyp variieren (z. B. Schichtprotokolle, Vorfallberichte, Audit-Aufzeichnungen).\n\n7. Sicherheit\nWir setzen geeignete technische und organisatorische Maßnahmen ein, darunter:\nZugriffskontrollen und rollenbasierte Berechtigungen\nVerschlüsselte Datenübertragung\nProtokollierung und Monitoring zur Erkennung von Missbrauch\nKein System ist zu 100 % sicher, jedoch verbessern wir unsere Schutzmaßnahmen kontinuierlich.\n\n8. Ihre Rechte\nAbhängig von Ihrem Rechtsraum können Sie folgende Rechte haben:\nAuskunft über Ihre personenbezogenen Daten\nBerichtigung unrichtiger Daten\nLöschung Ihrer Daten (soweit gesetzlich möglich)\nEinschränkung oder Widerspruch gegen die Verarbeitung\nDatenübertragbarkeit\nWiderruf einer Einwilligung (wenn die Verarbeitung darauf basiert)\nZur Ausübung dieser Rechte kontaktieren Sie bitte: info@falcon-sec.de\n\n9. Kinder\nDiese App ist nicht für Kinder bestimmt und richtet sich ausschließlich an autorisierte erwachsene Mitarbeiter.\n\n10. Internationale Datenübermittlungen\nFalls Daten außerhalb Ihres Landes verarbeitet werden, setzen wir geeignete Schutzmaßnahmen gemäß den geltenden gesetzlichen Anforderungen um.\n\n11. Änderungen dieser Datenschutzerklärung\nWir können diese Datenschutzerklärung gelegentlich aktualisieren. Änderungen werden mit einem aktualisierten Gültigkeitsdatum veröffentlicht.\n\n12. Kontakt\nBei Fragen zum Datenschutz oder entsprechenden Anfragen:\nFalcon GmbH\nMathias-Brüggen-Str. 1\n50827 Köln\ninfo@falcon-sec.de"
+    },
+    "techInfo": {
+      "title": "Technische Informationen",
+      "version": "Version: 2.1.0",
+      "update": "Letztes Update: März 2026"
+    }
+  },
+  "en": {
+    "hero": {
+      "title": "Falcon SecPro",
+      "subtitle": "Official Support & Help Center",
+      "description": "Your safety is our priority. We support you with all technical questions regarding the Falcon SecPro app."
+    },
+    "contact": {
+      "title": "Support Channels",
+      "email": "it.managment@falcon-sec.de",
+      "emergencyTitle": "Emergency Note",
+      "emergencyText": "In case of acute emergencies, please call our EMERGENCY number.",
+      "status": "Check System Status"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions (FAQ)",
+      "login": {
+        "q": "Login Problems / Reset Password",
+        "a": "If you cannot log in, please check your internet connection. To reset your password, contact our IT Support Team."
+      },
+      "shifts": {
+        "q": "No shifts visible",
+        "a": "If no shifts are displayed, make sure you are scheduled for the current period. Synchronize the app manually by pulling down in the shift overview."
+      },
+      "sos": {
+        "q": "SOS Button Behavior",
+        "a": "When the SOS button is pressed, an alarm is immediately sent to the central office, including your current GPS position. The alarm can only be terminated by the operations center or after security confirmation."
+      },
+      "checkpoint": {
+        "q": "Problems with Checkpoint Scan",
+        "a": "Make sure NFS is activated on your device or the camera has access (for QR codes). Clean the lens and hold the device steady."
+      },
+      "notifications": {
+        "q": "Notification problems (iOS/Android)",
+        "a": "Check the system settings on your phone to see if \"Falcon SecPro\" has permission to send notifications. Disable \"Do Not Disturb\" mode."
+      },
+      "permissions": {
+        "q": "Required App Permissions",
+        "a": "The app requires access to: Location (for GPS tracking/geofencing), Notifications (for deployment info), Camera (for reports/scans)."
+      },
+      "incident": {
+        "q": "Error sending incident reports",
+        "a": "Check if all required fields are filled. In case of poor reception, the report is temporarily stored and automatically sent as soon as a stable connection is established again."
+      },
+      "sync": {
+        "q": "Data synchronization delay",
+        "a": "Synchronizations may be delayed with a weak connection. Stay online; the app will try to sync the data with the server in the background."
+      },
+      "devices": {
+        "q": "Supported Devices & OS Versions",
+        "a": "Falcon SecPro supports iOS version 15.0 and Android version 10.0 and up. We recommend using current high-end or mid-range smartphones for optimal performance."
+      }
+    },
+    "privacy": {
+      "title": "Privacy & Security",
+      "text": "The Falcon SecPro app meets the highest security standards and is GDPR compliant. We only process data strictly necessary for the operation and security of your shifts.",
+      "links": {
+        "privacy": "Privacy Policy (App)",
+        "terms": "Terms of Use"
+      },
+      "full_policy_raw": "Falcon GmbH\nMathias Brüggen Str. 1\n50827 Köln\n\nFalcon GmbH (“we”, “us”, “our”) provides the Falcon SecPro App for operational use by authorized security workers. This Privacy Policy explains how personal data is collected, used, and protected.\n\n1. Who this app is for\nThis app is for employees and authorized personnel of Falcon GmbH. It is not intended for public consumer use.\n\n2. Data we collect\nDepending on your role and use of the app, we may collect:\n\nAccount and profile data (name, role, employee identifier)\nShift and work activity data (assigned shifts, accepted shifts, attendance/check-in/check-out)\nLocation data (for shift verification, patrol, SOS, and operational logging)\nIncident and report data (text, photos, attachments, timestamps)\nCommunication data (group chat messages, broadcast interactions)\nDevice/app data (device type, app version, log/error information)\nNotification data (push token, notification status)\n3. How we use your data\nWe process data to:\n\nManage workforce scheduling and open shift assignment\nSupport patrol workflows and operational reporting\nEnable internal communication and alerts\nImprove safety response (including SOS workflows)\nMaintain security, audit trails, and fraud/misuse prevention\nComply with legal and contractual obligations\n4. Legal basis (where applicable)\nWhere required by law (for example GDPR), we process personal data based on:\n\nPerformance of employment/contractual obligations\nLegitimate business interests in security operations\nCompliance with legal obligations\nConsent (where required, e.g., specific permissions)\n5. Data sharing\nWe do not sell personal data.\nWe may share data with:\n\nAuthorized internal personnel (admins/supervisors)\nService providers (hosting, database, notification infrastructure)\nLegal authorities when required by law\nAll sharing is limited to what is necessary for operations and compliance.\n\n6. Data retention\nWe retain data only as long as needed for operational, contractual, legal, and audit requirements.\nRetention periods may vary by data type (e.g., shift logs, incident reports, audit records).\n\n7. Security\nWe apply appropriate technical and organizational safeguards, including:\n\nAccess controls and role-based permissions\nEncrypted data transmission\nLogging and monitoring for misuse detection\nNo system is 100% secure, but we continuously improve protections.\n\n8. Your rights\nDepending on your jurisdiction, you may have rights to:\n\nAccess your personal data\nRequest correction of inaccurate data\nRequest deletion (where legally possible)\nRestrict or object to processing\nData portability\nWithdraw consent (where consent is the legal basis)\nTo make a request, contact: info@falcon-sec.de.\n\n9. Children\nThis app is not intended for children and is only for authorized adult workforce users.\n\n10. International transfers\nIf data is processed outside your country, we implement appropriate safeguards required by applicable law.\n\n11. Changes to this policy\nWe may update this Privacy Policy from time to time. Updates will be posted with a revised effective date.\n\n12. Contact\nIf you have privacy questions or requests:\n\nFalcon GmbH\nMathias Brüggen Str. 1\n50827 Köln\ninfo@falcon-sec.de",
+      "dataPoints": "Processed data: GPS location (only during working hours), Name, Deployment data, Logs."
+    },
+    "techInfo": {
+      "title": "Technical Information",
+      "version": "Version: 2.1.0",
+      "update": "Last Update: March 2026"
+    },
+    "checks": {
+      "title": "Before Contacting Support",
+      "step1": "Check internet connection (Wi-Fi/Mobile Data)",
+      "step2": "Update app to the latest version",
+      "step3": "Restart app or device",
+      "step4": "Verify all necessary permissions are granted"
+    }
+  }
+}

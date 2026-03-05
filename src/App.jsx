@@ -7,6 +7,8 @@ import Contact from './pages/Contact';
 import Impressum from './pages/Impressum';
 import Datenschutz from './pages/Datenschutz';
 import ServiceDetailNew from './pages/ServiceDetailNew';
+import FalconSecProSupport from './pages/FalconSecProSupport';
+import FalconSecProPrivacy from './pages/FalconSecProPrivacy';
 import ScrollToTop from './components/layout/ScrollToTop';
 import './App.css';
 
@@ -23,7 +25,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
-          {/* Add more routes here later */}
+          <Route path="/falconsecpro-support" element={<FalconSecProSupport />} />
+          <Route path="/falconsecpro-privacy" element={<FalconSecProPrivacy />} />
         </Routes>
       </Layout>
     </Router>

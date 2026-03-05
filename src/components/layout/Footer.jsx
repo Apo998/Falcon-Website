@@ -28,6 +28,7 @@ const Footer = () => {
           <div className="footer-links">
             <Link to="/impressum" className="footer-link">{t('footer.impressum')}</Link>
             <Link to="/datenschutz" className="footer-link">{t('footer.datenschutz')}</Link>
+            <Link to="/falconsecpro-support" className="footer-link">{t('footer.unsere_app')}</Link>
           </div>
           <p className="copyright">&copy; {currentYear} Falcon GmbH. All rights reserved.</p>
         </div>
