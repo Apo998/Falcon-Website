@@ -8,8 +8,8 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="hero-content">
-        <h1>Professional Services by <span>Falcon</span></h1>
-        <p>Ihre Sicherheit ist unser Anspruch – und unser Versprechen</p>
+        <h1>Falcon Security - <span>Sicherheitsdienst</span> Köln & NRW</h1>
+        <p>{t('home.heroSubtitle')}</p>
         <Link to="/contact" className="cta-button">
           {t('home.contactBtn')}
         </Link>

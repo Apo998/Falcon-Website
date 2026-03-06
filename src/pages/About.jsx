@@ -1,26 +1,18 @@
-import { useTranslation } from 'react-i18next';
+import SEO from '../components/common/SEO';
+import AboutContent from '../components/about/AboutContent';
 import Team from '../components/about/Team';
 import './About.css';
 
 const About = () => {
-  const { t } = useTranslation();
-
   return (
     <div className="about-page">
-      <div className="about-header">
-        <h1>{t('about_page.title')}</h1>
-        <p className="subtitle">{t('about_page.subtitle')}</p>
-      </div>
-      
-      <div className="about-content">
-        <div className="about-text">
-          <p>{t('about_page.content.p1')}</p>
-          <p>{t('about_page.content.p2')}</p>
-          <p>{t('about_page.content.p3')}</p>
-          <p>{t('about_page.content.p4')}</p>
-        </div>
-      </div>
-
+      <SEO 
+        title="Über uns"
+        description="Erfahren Sie mehr über Falcon Security. Seit über 5 Jahren Ihr zuverlässiger Partner für Sicherheit in ganz Nordrhein-Westfalen."
+        keywords="Falcon Security Team, Über Falcon GmbH, Sicherheitsunternehmen Köln, Sicherheit NRW"
+        canonical="https://falcon-koeln.de/about"
+      />
+      <AboutContent />
       <Team />
     </div>
   );

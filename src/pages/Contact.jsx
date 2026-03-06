@@ -1,3 +1,4 @@
+import SEO from "../components/common/SEO";
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { supabase } from '../lib/supabaseClient';
@@ -49,7 +50,6 @@ const Contact = () => {
     setStatus({ type: '', message: '' });
 
     try {
-      // 1. Save to Supabase
       const { error: supabaseError } = await supabase
         .from('messages')
         .insert([
@@ -66,7 +66,6 @@ const Contact = () => {
         console.error('Supabase error:', supabaseError);
       }
 
-      // 2. EmailJS Configuration
       const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
       const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
       const adminTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
@@ -74,8 +73,6 @@ const Contact = () => {
 
       if (serviceId && publicKey) {
         const promises = [];
-
-        // Forward to Business
         if (adminTemplateId) {
           promises.push(sendEmail(serviceId, adminTemplateId, publicKey, {
             from_name: formData.name,
@@ -86,33 +83,20 @@ const Contact = () => {
             to_name: 'Falcon Security',
           }));
         }
-
-        // Send Auto-Reply to User
         if (autoReplyTemplateId) {
           promises.push(sendEmail(serviceId, autoReplyTemplateId, publicKey, {
             to_name: formData.name,
-            to_email: formData.email, // common dynamic recipient variable
-            email: formData.email,    // common dynamic recipient variable
-            reply_to: 'info@falcon-koeln.de', // so user replies to your business
+            to_email: formData.email,
+            email: formData.email,
+            reply_to: 'info@falcon-koeln.de',
           }));
         }
-
         await Promise.all(promises);
-      } else {
-        console.warn('EmailJS configuration missing core parameters.');
       }
 
       setStatus({ type: 'success', message: t('contact.successMessage') || 'Message sent successfully!' });
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        message: ''
-      });
-      
+      setFormData({ name: '', email: '', phone: '', message: '' });
       setTimeout(() => setStatus({ type: '', message: '' }), 5000);
-
     } catch (error) {
       console.error('Error submitting form:', error);
       setStatus({ type: 'error', message: error.message || t('contact.errorMessage') || 'An error occurred.' });
@@ -123,6 +107,12 @@ const Contact = () => {
 
   return (
     <div className="contact-page">
+      <SEO 
+        title="Kontakt" 
+        description="Kontaktieren Sie Falcon Security für ein unverbindliches Angebot. Ihr zuverlässiger Sicherheitsdienst in Köln und NRW." 
+        keywords="Falcon Security Kontakt, Sicherheitsdienst Köln Kontakt, Angebot Security" 
+        canonical="https://falcon-koeln.de/contact" 
+      />
       <h1>{t('contact.pageTitle')}</h1>
       <p>{t('contact.subtitle')}</p>
       
@@ -142,50 +132,20 @@ const Contact = () => {
       <form className="contact-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">{t('contact.name')}</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+          <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
         </div>
-
         <div className="form-group">
           <label htmlFor="email">{t('contact.email')}</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
+          <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
         </div>
-
         <div className="form-group">
           <label htmlFor="phone">{t('contact.phone')}</label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-          />
+          <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} />
         </div>
-
         <div className="form-group">
           <label htmlFor="message">{t('contact.message')}</label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          />
+          <textarea id="message" name="message" value={formData.message} onChange={handleChange} required />
         </div>
-
         <button type="submit" className="submit-button" disabled={isSubmitting}>
           {isSubmitting ? t('contact.submitting') : t('contact.submit')}
         </button>

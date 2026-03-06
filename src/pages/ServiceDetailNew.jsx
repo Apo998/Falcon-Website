@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { services } from '../data/services';
+import SEO from '../components/common/SEO';
 
 const ServiceDetailNew = () => {
     const { serviceId } = useParams();
@@ -13,9 +14,12 @@ const ServiceDetailNew = () => {
         return <Navigate to="/services" replace />;
     }
 
+    const serviceTitle = t(`services.${service.id}`);
+    const serviceDescription = t(`services.${service.id}_desc`).replace(/<[^>]*>?/gm, '').substring(0, 160);
+
     const styles = {
         pageWrapper: {
-            backgroundColor: '#111', // Dark background for the whole page area
+            backgroundColor: '#111', 
             minHeight: '100vh',
             color: 'white',
         },
@@ -26,7 +30,7 @@ const ServiceDetailNew = () => {
             fontFamily: 'sans-serif',
         },
         hero: {
-            backgroundColor: '#ffac2e', // Falcon brand color
+            backgroundColor: '#ffac2e',
             color: 'white',
             padding: '3rem 2rem',
             textAlign: 'center',
@@ -43,15 +47,21 @@ const ServiceDetailNew = () => {
         },
         content: {
             lineHeight: '1.8',
-            color: 'white', // White text as requested
+            color: 'white',
             fontSize: '1.15rem',
         },
     };
 
     return (
         <div style={styles.pageWrapper}>
+            <SEO 
+                title={serviceTitle}
+                description={serviceDescription}
+                keywords={`${serviceTitle}, Security Köln, Sicherheitsdienst NRW, Falcon Security`}
+                canonical={`https://falcon-koeln.de/services/${serviceId}`}
+            />
             <div style={styles.hero}>
-                <h1 style={styles.heroTitle}>{t(`services.${service.id}`)}</h1>
+                <h1 style={styles.heroTitle}>{serviceTitle}</h1>
             </div>
 
             <div style={styles.container}>
