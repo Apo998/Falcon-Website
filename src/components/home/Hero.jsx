@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="hero-content">
-        <h1>Falcon Security - <span>Sicherheitsdienst</span> Köln & NRW</h1>
+        <h1>Ihre Sicherheit ist unsere <span>Verantwortung</span></h1>
         <p>{t('home.heroSubtitle')}</p>
         <Link to="/contact" className="cta-button">
           {t('home.contactBtn')}
