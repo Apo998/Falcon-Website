@@ -11,9 +11,9 @@ const SEO = ({
   ogImage, 
   ogType = 'website' 
 }) => {
-  const siteTitle = 'Falcon Security';
+  const siteTitle = 'Falcon GmbH I  Sicherheitsdienst und Dienstleistung in Köln und NRW';
   const fullTitle = title ? `${title} | ${siteTitle}` : `${siteTitle} - Sicherheitsdienst Köln & NRW`;
-  const defaultDescription = 'Falcon Security ist Ihr professioneller Partner für Sicherheitsdienste in Köln und ganz NRW. Objektschutz, Veranstaltungsschutz, Baustellenbewachung und mehr.';
+  const defaultDescription = 'Die Falcon GmbH steht für Sicherheit- und Dienstleistungen des einundzwanzigsten Jahrhunderts. Als modernes Sicherheitsunternehmen aus Köln verbinden wir erfahrenes Fachpersonal mit digitalen Kontrollsystemen, vernetzten Live-Schaltungen und präziser Einsatzplanung.';
   const defaultKeywords = 'Security, Sicherheitsdienst, Köln, NRW, Falcon Security, Objektschutz, Baustellenbewachung';
   const baseUrl = 'https://falcon-koeln.de';
 
