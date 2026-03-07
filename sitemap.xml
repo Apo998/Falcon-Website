@@ -2,32 +2,92 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://falcon-koeln.de/</loc>
-    <lastmod>2026-03-06</lastmod>
+    <lastmod>2026-03-07</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://falcon-koeln.de/about</loc>
-    <lastmod>2026-03-06</lastmod>
+    <lastmod>2026-03-07</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://falcon-koeln.de/services</loc>
-    <lastmod>2026-03-06</lastmod>
+    <lastmod>2026-03-07</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://falcon-koeln.de/services/veranstaltungsschutz</loc>
+    <lastmod>2026-03-07</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://falcon-koeln.de/services/kaufhausdetektive</loc>
+    <lastmod>2026-03-07</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://falcon-koeln.de/services/baustellenueberwachung</loc>
+    <lastmod>2026-03-07</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://falcon-koeln.de/services/zugangskontrollen</loc>
+    <lastmod>2026-03-07</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://falcon-koeln.de/services/objektschutz</loc>
+    <lastmod>2026-03-07</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://falcon-koeln.de/services/revierfahren</loc>
+    <lastmod>2026-03-07</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://falcon-koeln.de/services/schutzdienst</loc>
+    <lastmod>2026-03-07</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://falcon-koeln.de/services/personenschutz</loc>
+    <lastmod>2026-03-07</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://falcon-koeln.de/services/ausbildung</loc>
+    <lastmod>2026-03-07</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://falcon-koeln.de/services/andere</loc>
+    <lastmod>2026-03-07</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://falcon-koeln.de/contact</loc>
-    <lastmod>2026-03-06</lastmod>
+    <lastmod>2026-03-07</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://falcon-koeln.de/falconsecpro-support</loc>
+    <lastmod>2026-03-07</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://falcon-koeln.de/falconsecpro-privacy</loc>
+    <lastmod>2026-03-07</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://falcon-koeln.de/impressum</loc>
-    <lastmod>2026-03-06</lastmod>
+    <lastmod>2026-03-07</lastmod>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://falcon-koeln.de/datenschutz</loc>
-    <lastmod>2026-03-06</lastmod>
+    <lastmod>2026-03-07</lastmod>
     <priority>0.3</priority>
   </url>
 </urlset>
