@@ -14,11 +14,11 @@ const Clients = () => {
     { id: 7, src: '/clients/client7.png', alt: 'Client 7' },
     { id: 8, src: '/clients/client8.png', alt: 'Client 8' },
     { id: 9, src: '/clients/client9.png', alt: 'Client 9' },
-    { id: 10, src: '/clients/asa.png', alt: 'ASA' },
+    { id: 10, src: '/clients/asa.png', alt: 'ASA e-business' },
   ];
 
   return (
-    <section id="clients" className="clients-section">
+    <section id="clients" className="clients-section" aria-label="Unsere Kunden">
       <div className="clients-title-container">
         <h2 className="clients-title">{t('home.clientsTitle') || 'Unsere Kunden'}</h2>
         <div className="animated-line"></div>
@@ -31,6 +31,7 @@ const Clients = () => {
             src={`${import.meta.env.BASE_URL}${client.src.startsWith('/') ? client.src.slice(1) : client.src}`} 
             alt={client.alt} 
             className="client-logo" 
+            loading="lazy"
           />
         ))}
       </div>

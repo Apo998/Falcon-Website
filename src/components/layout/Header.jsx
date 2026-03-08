@@ -50,14 +50,19 @@ const Header = () => {
     return (
         <header className="header">
             <Link to="/" className="logo" onClick={handleLogoClick}>
-                <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Falcon" />
+                <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Falcon GmbH Logo" />
             </Link>
 
-            <button className="mobile-menu-btn" onClick={toggleMenu}>
+            <button 
+                className="mobile-menu-btn" 
+                onClick={toggleMenu}
+                aria-label={isMenuOpen ? "Menü schließen" : "Menü öffnen"}
+                aria-expanded={isMenuOpen}
+            >
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
 
-            <nav>
+            <nav aria-label="Hauptnavigation">
                 <ul className={`nav-list ${isMenuOpen ? 'open' : ''}`}>
                     {/* Emergency Button - Placed first (left side) */}
                     <li className="emergency-btn-item">
@@ -75,6 +80,8 @@ const Header = () => {
                             className="nav-link"
                             onClick={toggleServices}
                             style={{ background: 'none', border: 'none', cursor: 'pointer', font: 'inherit', display: 'flex', alignItems: 'center' }}
+                            aria-haspopup="true"
+                            aria-expanded={isServicesOpen}
                         >
                             {t('header.services')} <ChevronDown size={16} />
                         </button>
