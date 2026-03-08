@@ -8,7 +8,7 @@
     },
     "contact": {
       "title": "Support-Kanäle",
-      "email": "it.managment@falcon-sec.de",
+      "email": "it.management@falcon-sec.de",
       "emergencyTitle": "Notfall-Hinweis",
       "emergencyText": "Bei akuten Notfällen bitte unsere NOTRUF-Nummer anrufen.",
       "status": "Systemstatus prüfen"
@@ -83,10 +83,10 @@
     },
     "contact": {
       "title": "Support Channels",
-      "email": "it.managment@falcon-sec.de",
+      "email": "it.management@falcon-sec.de",
       "emergencyTitle": "Emergency Note",
       "emergencyText": "In case of acute emergencies, please call our EMERGENCY number.",
-      "status": "Check System Status"
+      "status": "All systems operational"
     },
     "faq": {
       "title": "Frequently Asked Questions (FAQ)",
