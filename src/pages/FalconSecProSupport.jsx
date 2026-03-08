@@ -73,6 +73,20 @@ const FalconSecProSupport = () => {
           />
           <h1 style={{ fontSize: '3rem', color: '#ffac2e', marginBottom: '16px', fontWeight: 'bold' }}>{t.hero.title}</h1>
           <h2 style={{ fontSize: '1.5rem', fontWeight: '500', marginBottom: '24px', color: '#eee' }}>{t.hero.subtitle}</h2>
+          <div style={{ 
+            display: 'inline-block', 
+            padding: '8px 16px', 
+            backgroundColor: 'rgba(255, 172, 46, 0.1)', 
+            border: '1px solid rgba(255, 172, 46, 0.2)', 
+            borderRadius: '100px',
+            marginBottom: '24px',
+            color: '#ffac2e',
+            fontSize: '0.9rem',
+            fontWeight: '500'
+          }}>
+            {t.hero.internalNotice}
+          </div>
+
           <p style={{ color: '#888', marginBottom: '40px', textAlign: 'center', fontSize: '1.1rem', lineHeight: '1.6' }}>{t.hero.description}</p>
         </div>
       </section>

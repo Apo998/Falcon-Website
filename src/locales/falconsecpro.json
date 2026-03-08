@@ -4,7 +4,8 @@
       "title": "Falcon SecPro",
       "subtitle": "Offizieller Support & Hilfezentrum",
       "description": "Ihre Sicherheit ist unser Anspruch. Wir unterstützen Sie bei allen technischen Fragen rund um die Falcon SecPro App. Unser Team garantiert eine Rückmeldung innerhalb von 24 Stunden an Werktagen.",
-      "cta": "Support kontaktieren"
+      "cta": "Support kontaktieren",
+      "internalNotice": "Falcon SecPro ist eine professionelle Workforce-Management-Lösung für die Falcon GmbH und ausschließlich für den internen Gebrauch bestimmt."
     },
     "contact": {
       "title": "Support-Kanäle",
@@ -79,7 +80,8 @@
     "hero": {
       "title": "Falcon SecPro",
       "subtitle": "Official Support & Help Center",
-      "description": "Your safety is our priority. We support you with all technical questions regarding the Falcon SecPro app."
+      "description": "Your safety is our priority. We support you with all technical questions regarding the Falcon SecPro app.",
+      "internalNotice": "Falcon SecPro is a professional workforce management solution for Falcon GmbH and is intended exclusively for internal use."
     },
     "contact": {
       "title": "Support Channels",
