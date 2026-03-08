@@ -12,6 +12,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="icon" type="image/png" href="/falcon-logo.png?v=2" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
+    <!-- SPA redirect logic for GitHub Pages -->
+    <script type="text/javascript">
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+
+    <!-- Preload and Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="image" href="/falcon-eye-banner.jpg" />
+    <link href="https://fonts.googleapis.com/css2?family=Zeniq:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
     <!-- Primary Meta Tags -->
     <title>Falcon GmbH | Sicherheitsdienst und Dienstleistung in Köln und NRW</title>
     <meta name="title" content="Falcon GmbH | Sicherheitsdienst und Dienstleistung in Köln und NRW" />
@@ -33,8 +53,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta property="twitter:title" content="Falcon GmbH | Sicherheitsdienst und Dienstleistung in Köln und NRW" />
     <meta property="twitter:description" content="Die Falcon GmbH steht für Sicherheit- und Dienstleistungen des einundzwanzigsten Jahrhunderts. Als modernes Sicherheitsunternehmen aus Köln verbinden wir erfahrenes Fachpersonal mit digitalen Kontrollsystemen, vernetzten Live-Schaltungen und präziser Einsatzplanung." />
     <meta property="twitter:image" content="https://falcon-koeln.de/og-image.png" />
-    <script type="module" crossorigin src="/assets/index-Cs_awcIz.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-D6NXUyp3.css">
+    <script type="module" crossorigin src="/assets/index-jaMi1m0q.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-ThGYer-S.css">
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
