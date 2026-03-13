@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Shield, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import falconSecProTranslations from '../locales/falconsecpro.json';
+import './FalconSecPro.css';
 
 const FalconSecProPrivacy = () => {
   const { i18n } = useTranslation();
@@ -17,8 +18,8 @@ const FalconSecProPrivacy = () => {
   }, [i18n.language, lang]);
 
   return (
-    <div style={{ backgroundColor: '#121212', minHeight: '100vh', color: '#fff', padding: '60px 20px' }}>
-      <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+    <div style={{ backgroundColor: '#121212', minHeight: '100vh', color: '#fff' }}>
+      <div className="privacy-page-container">
         
         <Link to="/falconsecpro-support" style={{ 
           display: 'flex', 
@@ -41,17 +42,7 @@ const FalconSecProPrivacy = () => {
           </h1>
         </header>
 
-        <section style={{ 
-          backgroundColor: '#1e1e1e', 
-          padding: '40px', 
-          borderRadius: '24px', 
-          border: '1px solid #333', 
-          lineHeight: '1.8',
-          whiteSpace: 'pre-wrap',
-          color: '#ccc',
-          textAlign: 'left',
-          fontSize: '1rem'
-        }}>
+        <section className="privacy-content-box">
           {text}
         </section>
 

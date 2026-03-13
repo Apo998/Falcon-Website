@@ -14,6 +14,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 import falconSecProTranslations from '../locales/falconsecpro.json';
+import './FalconSecPro.css';
 
 const FalconSecProSupport = () => {
   const { i18n } = useTranslation();
@@ -28,37 +29,10 @@ const FalconSecProSupport = () => {
 
   const faqData = Object.values(t.faq).filter(item => typeof item === 'object');
 
-  const navStyles = {
-    display: 'flex',
-    justifyContent: 'center',
-    gap: '20px',
-    padding: '20px 0',
-    borderBottom: '1px solid #333',
-    backgroundColor: '#1a1a1a',
-    position: 'sticky',
-    top: '0',
-    zIndex: '10'
-  };
-
-  const linkStyles = {
-    color: '#a0a0a0',
-    fontSize: '0.9rem',
-    fontWeight: '600',
-    textTransform: 'uppercase',
-    letterSpacing: '1px',
-    cursor: 'pointer',
-    textDecoration: 'none'
-  };
-
   return (
-    <div className="support-page" style={{ paddingBottom: '4rem', backgroundColor: '#121212', color: '#fff' }}>
+    <div className="support-page">
       {/* Hero Section */}
-      <section style={{ 
-        background: 'linear-gradient(135deg, #1a1a1a 0%, #252525 100%)',
-        padding: '100px 20px 80px',
-        textAlign: 'center',
-        borderBottom: '1px solid #333'
-      }}>
+      <section className="support-hero">
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <img 
             src="/falcon-secpro-logo.png" 
@@ -71,7 +45,7 @@ const FalconSecProSupport = () => {
               boxShadow: '0 20px 40px rgba(0,0,0,0.5)'
             }} 
           />
-          <h1 style={{ fontSize: '3rem', color: '#ffac2e', marginBottom: '16px', fontWeight: 'bold' }}>{t.hero.title}</h1>
+          <h1>{t.hero.title}</h1>
           <h2 style={{ fontSize: '1.5rem', fontWeight: '500', marginBottom: '24px', color: '#eee' }}>{t.hero.subtitle}</h2>
           <div style={{ 
             display: 'inline-block', 
@@ -92,31 +66,31 @@ const FalconSecProSupport = () => {
       </section>
 
       {/* Anchor Navigation */}
-      <nav style={navStyles}>
-        <a href="#contact" style={linkStyles}>Support</a>
-        <a href="#faq" style={linkStyles}>FAQ</a>
-        <a href="#checklist" style={linkStyles}>Checkliste</a>
-        <a href="#privacy" style={linkStyles}>Datenschutz</a>
+      <nav className="support-nav">
+        <a href="#contact">Support</a>
+        <a href="#faq">FAQ</a>
+        <a href="#checklist">Checkliste</a>
+        <a href="#privacy">Datenschutz</a>
       </nav>
 
-      <div style={{ maxWidth: '900px', margin: '60px auto', padding: '0 20px' }}>
+      <div className="support-container">
         
         {/* Support Channels */}
         <section id="contact" style={{ marginBottom: '80px', scrollMarginTop: '100px' }}>
           <h2 style={{ marginBottom: '40px', fontSize: '2rem' }}>{t.contact.title}</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
-            <div style={{ backgroundColor: '#1e1e1e', padding: '32px', borderRadius: '16px', border: '1px solid #333', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+          <div className="support-grid">
+            <div className="support-card">
               <Mail color="#ffac2e" size={32} style={{ marginBottom: '20px' }} />
               <h3 style={{ marginBottom: '12px' }}>E-Mail Support</h3>
-              <p style={{ marginBottom: '20px', color: '#eee' }}>{t.contact.email}</p>
+              <p style={{ marginBottom: '20px', color: '#eee', textAlign: 'center' }}>{t.contact.email}</p>
               <a href={`mailto:${t.contact.email}`} style={{ color: '#ffac2e', fontWeight: 'bold', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', textDecoration: 'none' }}>
                 Nachricht schreiben <ArrowRight size={18} />
               </a>
             </div>
-            <div style={{ backgroundColor: '#1e1e1e', padding: '32px', borderRadius: '16px', border: '1px solid #333', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+            <div className="support-card">
               <Activity color="#ffac2e" size={32} style={{ marginBottom: '20px' }} />
               <h3 style={{ marginBottom: '12px' }}>System Status</h3>
-              <p style={{ marginBottom: '20px', color: '#eee' }}>Alle Systeme operativ.</p>
+              <p style={{ marginBottom: '20px', color: '#eee', textAlign: 'center' }}>Alle Systeme operativ.</p>
               <span style={{ color: '#4CAF50', fontWeight: 'bold', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
                 <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#4CAF50' }}></span>
                 {t.contact.status}
@@ -128,14 +102,14 @@ const FalconSecProSupport = () => {
               <AlertTriangle color="#ffac2e" size={28} />
               <h4 style={{ color: '#ffac2e', margin: 0, fontSize: '1.1rem' }}>{t.contact.emergencyTitle}</h4>
             </div>
-            <p style={{ margin: 0, color: '#aaa', fontSize: '0.95rem' }}>{t.contact.emergencyText}</p>
+            <p style={{ margin: 0, color: '#aaa', fontSize: '0.95rem', textAlign: 'center' }}>{t.contact.emergencyText}</p>
           </div>
         </section>
 
         {/* FAQ Section */}
         <section id="faq" style={{ marginBottom: '80px', scrollMarginTop: '100px' }}>
           <h2 style={{ marginBottom: '40px', fontSize: '2rem' }}>{t.faq.title}</h2>
-          <div style={{ backgroundColor: '#1e1e1e', borderRadius: '16px', overflow: 'hidden', border: '1px solid #333' }}>
+          <div className="support-faq-container">
             {faqData.map((item, index) => (
               <div key={index} style={{ borderBottom: index === faqData.length - 1 ? 'none' : '1px solid #333' }}>
                 <button 
@@ -159,7 +133,7 @@ const FalconSecProSupport = () => {
                 </button>
                 {openFaq === index && (
                   <div style={{ padding: '0 24px 24px', backgroundColor: '#252525', color: '#aaa' }}>
-                    <p style={{ margin: 0, lineHeight: '1.6' }}>{item.a}</p>
+                    <p style={{ margin: 0, lineHeight: '1.6', textAlign: 'left' }}>{item.a}</p>
                   </div>
                 )}
               </div>
@@ -170,7 +144,7 @@ const FalconSecProSupport = () => {
         {/* Checklist Section */}
         <section id="checklist" style={{ marginBottom: '80px', scrollMarginTop: '100px' }}>
           <h2 style={{ marginBottom: '40px', fontSize: '2rem' }}>{t.checks.title}</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '16px' }}>
+          <div className="checklist-grid">
             {[t.checks.step1, t.checks.step2, t.checks.step3, t.checks.step4].map((step, idx) => (
               <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '16px', backgroundColor: '#1e1e1e', padding: '20px', borderRadius: '12px', border: '1px solid #333' }}>
                 <CheckCircle color="#ffac2e" size={20} />
@@ -181,10 +155,10 @@ const FalconSecProSupport = () => {
         </section>
 
         {/* Privacy Section */}
-        <section id="privacy" style={{ padding: '60px 40px', backgroundColor: '#1e1e1e', borderRadius: '24px', textAlign: 'center', border: '1px solid #333', scrollMarginTop: '100px' }}>
+        <section id="privacy" className="privacy-section-box">
           <Lock size={48} color="#ffac2e" style={{ margin: '0 auto 24px' }} />
           <h2 style={{ marginBottom: '20px', fontSize: '1.8rem' }}>{t.privacy.title}</h2>
-          <p style={{ color: '#aaa', marginBottom: '32px', lineHeight: '1.6' }}>{t.privacy.text}</p>
+          <p style={{ color: '#aaa', marginBottom: '32px', lineHeight: '1.6', textAlign: 'center' }}>{t.privacy.text}</p>
           
           <div style={{ 
             marginTop: '30px', 
@@ -195,7 +169,7 @@ const FalconSecProSupport = () => {
             textAlign: 'left', 
             border: '1px solid rgba(255, 172, 46, 0.2)' 
           }}>
-            <p style={{ color: '#ffac2e', fontSize: '0.9rem', margin: 0, lineHeight: '1.5' }}>
+            <p style={{ color: '#ffac2e', fontSize: '0.9rem', margin: 0, lineHeight: '1.5', textAlign: 'left' }}>
               <strong>{t.privacy.dataPoints}</strong>
             </p>
           </div>
