@@ -15,6 +15,7 @@ const Clients = () => {
     { id: 8, src: '/clients/client8.png', alt: 'Client 8' },
     { id: 9, src: '/clients/client9.png', alt: 'Client 9' },
     { id: 10, src: '/clients/asa.png', alt: 'ASA e-business' },
+    { id: 11, src: '/clients/solera.png', alt: 'Solera' },
   ];
 
   return (

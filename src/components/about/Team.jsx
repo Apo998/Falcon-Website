@@ -9,6 +9,7 @@ const teamMembers = [
   { name: 'Abdullah Adaileh', roleKey: 'technician' },
   { name: 'Yasin Aras', roleKey: 'area_manager' },
   { name: 'Taha Aras', roleKey: 'area_manager' },
+  { name: 'Yusuf Gönen', roleKey: 'sales' },
 ];
 
 const Team = () => {
