@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -14,7 +14,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router basename={import.meta.env.BASE_URL}>
+    <>
       <ScrollToTop />
       <Layout>
         <Routes>
@@ -29,7 +29,7 @@ function App() {
           <Route path="/falconsecpro-privacy" element={<FalconSecProPrivacy />} />
         </Routes>
       </Layout>
-    </Router>
+    </>
   );
 }
 
