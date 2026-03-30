@@ -1,7 +1,6 @@
 import SEO from "../components/common/SEO";
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { supabase } from '../lib/supabaseClient';
 import './Contact.css';
 
 const Contact = () => {
@@ -50,22 +49,6 @@ const Contact = () => {
     setStatus({ type: '', message: '' });
 
     try {
-      const { error: supabaseError } = await supabase
-        .from('messages')
-        .insert([
-          {
-            name: formData.name,
-            email: formData.email,
-            phone: formData.phone,
-            message: formData.message,
-            created_at: new Date().toISOString()
-          }
-        ]);
-
-      if (supabaseError) {
-        console.error('Supabase error:', supabaseError);
-      }
-
       const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
       const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
       const adminTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
