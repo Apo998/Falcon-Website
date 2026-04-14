@@ -12,6 +12,13 @@
     "rights": "Alle Rechte vorbehalten.",
     "unsere_app": "App"
   },
+  "cookieBanner": {
+    "title": "Cookie-Hinweis",
+    "description": "Diese Website verwendet Cookies, um die grundlegende Funktion der Seite zu gewährleisten und Ihr Nutzungserlebnis zu verbessern.",
+    "learnMore": "Mehr erfahren",
+    "decline": "Ablehnen",
+    "accept": "Akzeptieren"
+  },
   "home": {
     "heroTitle": "Falcon Security",
     "heroSubtitle": "Professionelle Sicherheitsdienste, maßgeschneidert auf Ihre Bedürfnisse.",

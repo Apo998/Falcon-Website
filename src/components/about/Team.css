@@ -122,3 +122,34 @@
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
 }
+
+.certificates-section {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.certificates-section h2 {
+  margin-bottom: 0.5rem;
+}
+
+.certificates-section h2::after {
+  margin: 6px auto 0;
+}
+
+.certificate-image {
+  display: block;
+  max-width: 760px;
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.certificate-image:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.03);
+}
