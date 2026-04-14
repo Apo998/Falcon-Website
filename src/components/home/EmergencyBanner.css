@@ -28,6 +28,7 @@
 
 .emergency-icon {
   animation: ring 2s ease-in-out infinite;
+  color: #000;
 }
 
 @keyframes ring {

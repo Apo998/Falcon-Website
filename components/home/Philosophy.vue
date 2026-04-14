@@ -42,6 +42,11 @@ onBeforeUnmount(() => {
         <p class="philosophy-paragraph">
           {{ t('home.philosophy.p2') }}
         </p>
+        <img
+          src="/dekra-zertifikat.png"
+          alt="Sicherungsdienstleistungen DIN 77200-1 Zertifikat"
+          class="philosophy-certificate-image"
+        >
       </div>
     </div>
   </section>
