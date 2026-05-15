@@ -40,5 +40,34 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/png', href: '/favicon.png' }
       ]
     }
+  },
+  routeRules: {
+    '/**': { prerender: true }
+  },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: [
+        '/',
+        '/about',
+        '/contact',
+        '/datenschutz',
+        '/falconsecpro-privacy',
+        '/falconsecpro-support',
+        '/impressum',
+        '/services',
+        '/services/veranstaltungsschutz',
+        '/services/kaufhausdetektive',
+        '/services/baustellenueberwachung',
+        '/services/zugangskontrollen',
+        '/services/objektschutz',
+        '/services/revierfahren',
+        '/services/schutzdienst',
+        '/services/personenschutz',
+        '/services/ausbildung',
+        '/services/andere'
+      ]
+    }
   }
 })
+
