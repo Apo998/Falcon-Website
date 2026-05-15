@@ -20,7 +20,10 @@ const clients = [
   { id: 16, src: '/clients/client16.png', alt: 'Client 16' },
   { id: 17, src: '/clients/client17.png', alt: 'Client 17' },
   { id: 18, src: '/clients/client18.png', alt: 'Client 18' },
-  { id: 19, src: '/clients/client19.png', alt: 'Client 19' }
+  { id: 19, src: '/clients/client19.png', alt: 'Client 19' },
+  { id: 20, src: '/clients/client20.png', alt: 'Client 20' },
+  { id: 21, src: '/clients/client21.png', alt: 'Client 21' },
+  { id: 22, src: '/clients/client22.png', alt: 'Client 22' }
 ]
 </script>
 
