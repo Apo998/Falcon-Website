@@ -14,7 +14,13 @@ const clients = [
   { id: 10, src: '/clients/asa.png', alt: 'ASA e-business' },
   { id: 11, src: '/clients/solera.png', alt: 'Solera' },
   { id: 12, src: '/clients/Trinkgut_Logo.svg.png', alt: 'Trinkgut' },
-  { id: 13, src: '/clients/client10.png', alt: 'Client 10' }
+  { id: 13, src: '/clients/client10.png', alt: 'Client 10' },
+  { id: 14, src: '/clients/client14.png', alt: 'Client 14' },
+  { id: 15, src: '/clients/client15.png', alt: 'Client 15' },
+  { id: 16, src: '/clients/client16.png', alt: 'Client 16' },
+  { id: 17, src: '/clients/client17.png', alt: 'Client 17' },
+  { id: 18, src: '/clients/client18.png', alt: 'Client 18' },
+  { id: 19, src: '/clients/client19.png', alt: 'Client 19' }
 ]
 </script>
 
