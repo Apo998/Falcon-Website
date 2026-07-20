@@ -23,7 +23,8 @@ const clients = [
   { id: 19, src: '/clients/client19.png', alt: 'Client 19' },
   { id: 20, src: '/clients/client20.png', alt: 'Client 20' },
   { id: 21, src: '/clients/client21.png', alt: 'Client 21' },
-  { id: 22, src: '/clients/client22.png', alt: 'Client 22' }
+  { id: 22, src: '/clients/client22.png', alt: 'Client 22' },
+  { id: 23, src: '/clients/veedels_fruende.png', alt: 'Veedels Fründe e.V.' }
 ]
 </script>
 
